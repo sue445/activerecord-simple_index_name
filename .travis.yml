@@ -4,6 +4,9 @@ rvm:
 - 2.2
 - 2.3
 - ruby-head
+gemfile:
+- gemfiles/activerecord_4_1.gemfile
+- gemfiles/activerecord_4_2.gemfile
 cache: bundler
 sudo: false
 before_install: gem install bundler -v 1.10.6
