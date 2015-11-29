@@ -3,7 +3,7 @@ module Activerecord
     class Railtie < ::Rails::Railtie
       initializer "simple_index_name.initializer" do
         ActiveSupport.on_load(:active_record) do
-          load "#{__dir__}/active_record_ext.rb"
+          require "activerecord/simple_index_name/active_record_ext"
         end
       end
     end
