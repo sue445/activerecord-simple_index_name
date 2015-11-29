@@ -8,8 +8,10 @@ Shorten index name
 [![Coverage Status](https://coveralls.io/repos/sue445/activerecord-simple_index_name/badge.svg?branch=master&service=github)](https://coveralls.io/github/sue445/activerecord-simple_index_name?branch=master)
 [![Code Climate](https://codeclimate.com/github/sue445/activerecord-simple_index_name/badges/gpa.svg)](https://codeclimate.com/github/sue445/activerecord-simple_index_name)
 
-## Requirements
-* [Ruby on Rails](https://github.com/rails/rails) or [Padrino](https://github.com/padrino/padrino-framework)
+## Supported 
+* [Ruby on Rails](https://github.com/rails/rails)
+* [Padrino](https://github.com/padrino/padrino-framework)
+* or plain activerecord
 
 ## Installation
 
@@ -42,8 +44,8 @@ end
 add_index :user_stocks, [:user_id, :article_id]
 ```
 
-* Before index name: `index_user_stocks_on_user_id_and_article_id`
-* After index name: `user_id_and_article_id`
+* Index name without `activerecord-simple_index_name` : `index_user_stocks_on_user_id_and_article_id`
+* Index name with `activerecord-simple_index_name` : `user_id_and_article_id`
 
 ## Development
 
