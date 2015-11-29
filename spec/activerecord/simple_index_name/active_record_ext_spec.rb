@@ -14,6 +14,12 @@ describe ActiveRecord::ConnectionAdapters::SchemaStatements do
       it_is_asserted_by { index_name == "user_id_and_article_id" }
     end
 
+    context "When specified index name" do
+      let(:table_name) { "comments" }
+
+      it_is_asserted_by { index_name == "comment_index" }
+    end
+
     def table_indexes(table)
       ActiveRecord::Base.connection.indexes(table)
     end
