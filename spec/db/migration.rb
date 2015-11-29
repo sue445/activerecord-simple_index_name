@@ -14,4 +14,10 @@ ActiveRecord::Schema.define(version: 1) do
     t.timestamps null: false
   end
   add_index :articles, :user_id
+
+  create_table :comments do |t|
+    t.integer :user_id, null: false
+    t.timestamps null: false
+  end
+  add_index :comments, :user_id, name: "comment_index"
 end
