@@ -1,14 +1,15 @@
 # Activerecord::SimpleIndexName
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/activerecord/simple_index_name`. To experiment with that code, run `bin/console` for an interactive prompt.
+Shorten index name
 
+[![Gem Version](https://badge.fury.io/rb/activerecord-simple_index_name.svg)](https://badge.fury.io/rb/activerecord-simple_index_name)
 [![Build Status](https://travis-ci.org/sue445/activerecord-simple_index_name.svg?branch=master)](https://travis-ci.org/sue445/activerecord-simple_index_name)
 [![Dependency Status](https://gemnasium.com/sue445/activerecord-simple_index_name.svg)](https://gemnasium.com/sue445/activerecord-simple_index_name)
 [![Coverage Status](https://coveralls.io/repos/sue445/activerecord-simple_index_name/badge.svg?branch=master&service=github)](https://coveralls.io/github/sue445/activerecord-simple_index_name?branch=master)
 [![Code Climate](https://codeclimate.com/github/sue445/activerecord-simple_index_name/badges/gpa.svg)](https://codeclimate.com/github/sue445/activerecord-simple_index_name)
-[![Issue Count](https://codeclimate.com/github/sue445/activerecord-simple_index_name/badges/issue_count.svg)](https://codeclimate.com/github/sue445/activerecord-simple_index_name)
 
-TODO: Delete this and the text above, and describe your gem
+## Requirements
+* [Ruby on Rails](https://github.com/rails/rails) or [Padrino](https://github.com/padrino/padrino-framework)
 
 ## Installation
 
@@ -28,7 +29,21 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+When run `rake db:migrate` (or `rake ar:migrate`), index name will be automatically short.
+
+## Example
+```ruby
+create_table :user_stocks do |t|
+  t.integer :user_id,    null: false
+  t.integer :article_id, null: false
+  t.timestamps null: false
+end
+
+add_index :user_stocks, [:user_id, :article_id]
+```
+
+* Before index name: `index_user_stocks_on_user_id_and_article_id`
+* After index name: `user_id_and_article_id`
 
 ## Development
 
@@ -38,10 +53,14 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/activerecord-simple_index_name.
+Bug reports and pull requests are welcome on GitHub at https://github.com/sue445/activerecord-simple_index_name.
 
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
+## Special thanks
+[@kamipo](https://github.com/kamipo) :bow:
+
+Original idea is http://qiita.com/kamipo/items/6e5a1e238d7cc0611ade (ja)
