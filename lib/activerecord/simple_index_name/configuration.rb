@@ -5,7 +5,10 @@ module Activerecord
     class Configuration
       include ActiveSupport::Configurable
 
+      config_accessor :auto_shorten
+
       configure do |config|
+        config.auto_shorten = true
       end
     end
   end
