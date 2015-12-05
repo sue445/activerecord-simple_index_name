@@ -5,3 +5,4 @@ ActiveRecord::Base.configurations["test"] = {
 }.with_indifferent_access
 
 ActiveRecord::Base.establish_connection(:test)
+ActiveRecord::Schema.verbose = false
