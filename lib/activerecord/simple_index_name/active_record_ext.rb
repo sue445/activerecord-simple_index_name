@@ -2,7 +2,17 @@ module ActiveRecord
   module ConnectionAdapters
     module SchemaStatements
       def index_name_with_simple(table_name, options)
-        if Activerecord::SimpleIndexName.config.auto_shorten
+        shorten_mode =
+          case Thread.current[:simple_index_name_shorten_mode]
+          when :enable
+            true
+          when :disable
+            false
+          else
+            Activerecord::SimpleIndexName.config.auto_shorten
+          end
+
+        if shorten_mode
           if Hash === options && options[:column]
             Array.wrap(options[:column]) * "_and_"
           else

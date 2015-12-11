@@ -32,6 +32,22 @@ describe ActiveRecord::ConnectionAdapters::SchemaStatements do
       end
     end
 
+    context "When auto_shorten is either enabled or disabled" do
+      [true, false].each do |auto_shorten|
+        context "When auto_shorten is #{auto_shorten}" do
+          include_context :setup_database, auto_shorten: auto_shorten
+
+          context "When has DisableShorten in migration" do
+            it_is_asserted_by { index_name_of(:user_stocks, :article_id) == "index_user_stocks_on_article_id" }
+          end
+
+          context "When has EnableShorten in migration" do
+            it_is_asserted_by { index_name_of(:articles, :category_id) == "category_id" }
+          end
+        end
+      end
+    end
+
     def table_indexes(table)
       ActiveRecord::Base.connection.indexes(table)
     end
