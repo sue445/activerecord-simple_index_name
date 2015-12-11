@@ -17,6 +17,7 @@ end
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require "activerecord/simple_index_name"
 require "rspec-power_assert"
+require "pry"
 
 require_relative "./db/setup"
 # require_relative "./db/migration"
