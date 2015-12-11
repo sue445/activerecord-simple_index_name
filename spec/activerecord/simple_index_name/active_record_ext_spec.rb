@@ -1,6 +1,6 @@
 describe ActiveRecord::ConnectionAdapters::SchemaStatements do
   describe "#index_name_with_simple" do
-    context "When auto_shotten is enabled" do
+    context "When auto_shorten is enabled" do
       include_context :setup_database, auto_shorten: true
 
       context "When single column index" do
@@ -16,7 +16,7 @@ describe ActiveRecord::ConnectionAdapters::SchemaStatements do
       end
     end
 
-    context "When auto_shotten is disabled" do
+    context "When auto_shorten is disabled" do
       include_context :setup_database, auto_shorten: false
 
       context "When single column index" do
