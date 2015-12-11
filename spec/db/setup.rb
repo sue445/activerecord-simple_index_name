@@ -6,3 +6,24 @@ ActiveRecord::Base.configurations["test"] = {
 
 ActiveRecord::Base.establish_connection(:test)
 ActiveRecord::Schema.verbose = false
+
+def migrate_dir
+  "#{spec_dir}/db/migrate"
+end
+
+require "active_record/railtie"
+
+def up_migrate
+  configuration = ActiveRecord::Base.configurations["test"]
+
+  # db:create
+  ActiveRecord::Tasks::DatabaseTasks.create(configuration)
+
+  # db:migrate
+  ActiveRecord::Migrator.up(migrate_dir)
+end
+
+def down_migrate
+  # db:drop
+  ActiveRecord::Migrator.down(migrate_dir)
+end
