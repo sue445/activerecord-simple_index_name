@@ -1,26 +1,18 @@
 describe ActiveRecord::ConnectionAdapters::SchemaStatements do
   describe "#index_name_with_simple" do
-    let(:index_name) { table_indexes(table_name).first.name }
-
     context "When auto_shotten is enabled" do
       include_context :setup_database, auto_shorten: true
 
       context "When single column index" do
-        let(:table_name) { "articles" }
-
-        it_is_asserted_by { index_name == "user_id" }
+        it_is_asserted_by { index_name_of(:articles, [:user_id]) == "user_id" }
       end
 
       context "When multiple columns index" do
-        let(:table_name) { "user_stocks" }
-
-        it_is_asserted_by { index_name == "user_id_and_article_id" }
+        it_is_asserted_by { index_name_of(:user_stocks, [:user_id, :article_id]) == "user_id_and_article_id" }
       end
 
       context "When specified index name" do
-        let(:table_name) { "comments" }
-
-        it_is_asserted_by { index_name == "comment_index" }
+        it_is_asserted_by { index_name_of(:comments, :user_id) == "comment_index" }
       end
     end
 
@@ -28,26 +20,25 @@ describe ActiveRecord::ConnectionAdapters::SchemaStatements do
       include_context :setup_database, auto_shorten: false
 
       context "When single column index" do
-        let(:table_name) { "articles" }
-
-        it_is_asserted_by { index_name == "index_articles_on_user_id" }
+        it_is_asserted_by { index_name_of(:articles, [:user_id]) == "index_articles_on_user_id" }
       end
 
       context "When multiple columns index" do
-        let(:table_name) { "user_stocks" }
-
-        it_is_asserted_by { index_name == "index_user_stocks_on_user_id_and_article_id" }
+        it_is_asserted_by { index_name_of(:user_stocks, [:user_id, :article_id]) == "index_user_stocks_on_user_id_and_article_id" }
       end
 
       context "When specified index name" do
-        let(:table_name) { "comments" }
-
-        it_is_asserted_by { index_name == "comment_index" }
+        it_is_asserted_by { index_name_of(:comments, :user_id) == "comment_index" }
       end
     end
 
     def table_indexes(table)
       ActiveRecord::Base.connection.indexes(table)
+    end
+
+    def index_name_of(table, columns)
+      columns = Array.wrap(columns).map(&:to_s)
+      table_indexes(table.to_s).find { |index| index.columns == columns }.try(:name)
     end
   end
 end
