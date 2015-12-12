@@ -15,7 +15,7 @@ if ENV["CI"]
 end
 
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
-require "activerecord/simple_index_name"
+require "active_record/simple_index_name"
 require "rspec-power_assert"
 require "pry"
 
