@@ -1,4 +1,4 @@
-module Activerecord
+module ActiveRecord
   module SimpleIndexName
     require "active_support/configurable"
 

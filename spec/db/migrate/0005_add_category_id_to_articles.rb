@@ -1,5 +1,5 @@
 class AddCategoryIdToArticles < ActiveRecord::Migration
-  include Activerecord::SimpleIndexName::EnableShorten
+  include ActiveRecord::SimpleIndexName::EnableShorten
 
   def change
     add_column :articles, :category_id, :integer

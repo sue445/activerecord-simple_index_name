@@ -1,1 +1,1 @@
-require "activerecord/simple_index_name"
+require "active_record/simple_index_name"

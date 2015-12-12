@@ -9,7 +9,7 @@ module ActiveRecord
           when :disable
             false
           else
-            Activerecord::SimpleIndexName.config.auto_shorten
+            ActiveRecord::SimpleIndexName.config.auto_shorten
           end
 
         if shorten_mode

@@ -1,10 +1,10 @@
 require "active_record"
-require "activerecord/simple_index_name/version"
-require "activerecord/simple_index_name/configuration"
-require "activerecord/simple_index_name/disable_shorten"
-require "activerecord/simple_index_name/enable_shorten"
+require "active_record/simple_index_name/version"
+require "active_record/simple_index_name/configuration"
+require "active_record/simple_index_name/disable_shorten"
+require "active_record/simple_index_name/enable_shorten"
 
-module Activerecord
+module ActiveRecord
   module SimpleIndexName
     def self.config
       @config ||= Configuration.new
@@ -25,7 +25,7 @@ module Activerecord
 end
 
 if defined?(Rails)
-  require "activerecord/simple_index_name/railtie"
+  require "active_record/simple_index_name/railtie"
 else
-  require "activerecord/simple_index_name/active_record_ext"
+  require "active_record/simple_index_name/active_record_ext"
 end
