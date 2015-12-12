@@ -5,7 +5,7 @@ require 'active_record/simple_index_name/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "activerecord-simple_index_name"
-  spec.version       = Activerecord::SimpleIndexName::VERSION
+  spec.version       = ActiveRecord::SimpleIndexName::VERSION
   spec.authors       = ["sue445"]
   spec.email         = ["sue445@sue445.net"]
 

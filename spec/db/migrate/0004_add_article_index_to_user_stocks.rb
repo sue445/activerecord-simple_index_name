@@ -1,5 +1,5 @@
 class AddArticleIndexToUserStocks < ActiveRecord::Migration
-  include Activerecord::SimpleIndexName::DisableShorten
+  include ActiveRecord::SimpleIndexName::DisableShorten
 
   def change
     add_index :user_stocks, :article_id

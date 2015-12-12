@@ -1,4 +1,4 @@
-# Activerecord::SimpleIndexName
+# ActiveRecord::SimpleIndexName
 
 Shorten index name
 

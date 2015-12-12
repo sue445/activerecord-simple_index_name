@@ -1,4 +1,4 @@
-module Activerecord
+module ActiveRecord
   module SimpleIndexName
     class Railtie < ::Rails::Railtie
       initializer "simple_index_name.initializer" do

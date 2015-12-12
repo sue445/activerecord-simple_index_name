@@ -4,7 +4,7 @@ require "active_record/simple_index_name/configuration"
 require "active_record/simple_index_name/disable_shorten"
 require "active_record/simple_index_name/enable_shorten"
 
-module Activerecord
+module ActiveRecord
   module SimpleIndexName
     def self.config
       @config ||= Configuration.new
