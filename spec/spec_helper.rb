@@ -20,7 +20,6 @@ require "rspec-power_assert"
 require "pry"
 
 require_relative "./db/setup"
-# require_relative "./db/migration"
 
 Dir["#{__dir__}/support/**/*.rb"].each { |f| require f }
 
