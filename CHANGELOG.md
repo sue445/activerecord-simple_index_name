@@ -3,6 +3,14 @@
 ## Unreleased
 [full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v0.1.0...master)
 
+## v0.2.0.beta1
+### Breaking changes :bomb:
+* Move files and rename module
+  * https://github.com/sue445/activerecord-simple_index_name/pull/17
+  * Move: `lib/activerecord/simple_index_name` -> `lib/active_record/simple_index_name`
+  * Rename: `Activerecord::SimpleIndexName` -> `ActiveRecord::SimpleIndexName`
+  * If use `require "activerecord/simple_index_name"`, change to `require "activer_ecord/simple_index_name"`
+
 ### Enhancements
 * Add `ActiveRecord::SimpleIndexName.config.auto_shorten` configuration
   * https://github.com/sue445/activerecord-simple_index_name/pull/13
@@ -12,10 +20,6 @@
 ### Other
 * Test with Rails 4.0.x
   * https://github.com/sue445/activerecord-simple_index_name/pull/19
-* Move files and rename module
-  * https://github.com/sue445/activerecord-simple_index_name/pull/17
-  * Move: `lib/activerecord/simple_index_name` -> `lib/active_record/simple_index_name`
-  * Rename: `Activerecord::SimpleIndexName` -> `ActiveRecord::SimpleIndexName`
 * Other tiny refactorings 
   * https://github.com/sue445/activerecord-simple_index_name/pull/14
   * https://github.com/sue445/activerecord-simple_index_name/pull/15
