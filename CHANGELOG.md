@@ -1,9 +1,11 @@
 # Change Log
 
 ## Unreleased
-[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v0.1.0...master)
+[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v0.2.0...master)
 
-## v0.2.0.beta1
+## v0.2.0
+[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v0.1.0...v0.2.0)
+
 ### Breaking changes :bomb:
 * Move files and rename module
   * https://github.com/sue445/activerecord-simple_index_name/pull/17
@@ -24,6 +26,9 @@
   * https://github.com/sue445/activerecord-simple_index_name/pull/14
   * https://github.com/sue445/activerecord-simple_index_name/pull/15
   * https://github.com/sue445/activerecord-simple_index_name/pull/16
+  * https://github.com/sue445/activerecord-simple_index_name/pull/21
+  * https://github.com/sue445/activerecord-simple_index_name/pull/23
+  * https://github.com/sue445/activerecord-simple_index_name/pull/24
   
 ## v0.1.0
 * First release
