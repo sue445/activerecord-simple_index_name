@@ -1,7 +1,7 @@
 module ActiveRecord
-  module ConnectionAdapters
-    module SchemaStatements
-      def index_name_with_simple(table_name, options)
+  module SimpleIndexName
+    module ActiveRecordExt
+      def index_name(table_name, options)
         shorten_mode =
           case Thread.current[:simple_index_name_shorten_mode]
           when :enable
@@ -16,14 +16,16 @@ module ActiveRecord
           if Hash === options && options[:column]
             Array.wrap(options[:column]) * "_and_"
           else
-            index_name_without_simple(table_name, options)
+            super
           end
         else
-          index_name_without_simple(table_name, options)
+          super
         end
       end
-
-      alias_method_chain :index_name, :simple
     end
   end
+end
+
+ActiveRecord::ConnectionAdapters::AbstractAdapter.class_eval do
+  prepend ActiveRecord::SimpleIndexName::ActiveRecordExt
 end
