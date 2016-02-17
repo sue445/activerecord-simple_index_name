@@ -1,13 +1,14 @@
 language: ruby
 rvm:
 - 2.1
-- 2.2
+- 2.2.4
 - 2.3.0
 - ruby-head
 gemfile:
 - gemfiles/rails_4_0.gemfile
 - gemfiles/rails_4_1.gemfile
 - gemfiles/rails_4_2.gemfile
+- gemfiles/rails_5_0.gemfile
 cache: bundler
 sudo: false
 before_install: gem install bundler -v 1.10.6
@@ -26,3 +27,7 @@ notifications:
 matrix:
   allow_failures:
   - rvm: ruby-head
+  exclude:
+  # NOTE: activesupport 5.x requires Ruby version >= 2.2.2
+  - rvm: 2.1
+    gemfile: gemfiles/rails_5_0.gemfile
