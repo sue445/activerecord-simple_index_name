@@ -1,7 +1,20 @@
 # Change Log
 
 ## Unreleased
-[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v0.2.0...master)
+[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v0.3.0.beta1...master)
+
+## v0.3.0.beta1
+[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v0.2.0...v0.3.0.beta1)
+
+### Enhancements
+* Support activerecord 5.0.0.beta2
+  * https://github.com/sue445/activerecord-simple_index_name/pull/22
+  
+### Other
+* Keep ruby 2.3.x build on Travis CI
+  * https://github.com/sue445/activerecord-simple_index_name/pull/25
+* Relax bundler version
+  * https://github.com/sue445/activerecord-simple_index_name/pull/26
 
 ## v0.2.0
 [full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v0.1.0...v0.2.0)
