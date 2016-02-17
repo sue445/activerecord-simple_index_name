@@ -12,12 +12,8 @@ module ActiveRecord
             ActiveRecord::SimpleIndexName.config.auto_shorten
           end
 
-        if shorten_mode
-          if Hash === options && options[:column]
-            Array.wrap(options[:column]) * "_and_"
-          else
-            super
-          end
+        if shorten_mode && Hash === options && options[:column]
+          Array.wrap(options[:column]) * "_and_"
         else
           super
         end
