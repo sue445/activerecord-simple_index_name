@@ -1,4 +1,4 @@
-class CreateArticles < ActiveRecord::Migration
+class CreateArticles < MIGRATION_CLASS
   def change
     create_table :articles do |t|
       t.integer :user_id, null: false

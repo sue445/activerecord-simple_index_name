@@ -1,4 +1,4 @@
-class CreateComments < ActiveRecord::Migration
+class CreateComments < MIGRATION_CLASS
   def change
     create_table :comments do |t|
       t.integer :user_id, null: false

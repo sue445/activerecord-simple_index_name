@@ -13,6 +13,13 @@ end
 
 require "active_record/railtie"
 
+MIGRATION_CLASS =
+  if ActiveRecord::VERSION::MAJOR >= 5
+    ActiveRecord::Migration[4.2]
+  else
+    ActiveRecord::Migration
+  end
+
 def up_migrate
   configuration = ActiveRecord::Base.configurations["test"]
 
