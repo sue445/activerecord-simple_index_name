@@ -1,4 +1,4 @@
-class AddArticleIndexToUserStocks < ActiveRecord::Migration
+class AddArticleIndexToUserStocks < MIGRATION_CLASS
   include ActiveRecord::SimpleIndexName::DisableShorten
 
   def change

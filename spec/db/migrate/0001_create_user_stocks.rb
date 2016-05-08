@@ -1,4 +1,4 @@
-class CreateUserStocks < ActiveRecord::Migration
+class CreateUserStocks < MIGRATION_CLASS
   def change
     create_table :user_stocks do |t|
       t.integer :user_id,    null: false

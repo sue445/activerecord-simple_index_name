@@ -1,4 +1,4 @@
-class AddCategoryIdToArticles < ActiveRecord::Migration
+class AddCategoryIdToArticles < MIGRATION_CLASS
   include ActiveRecord::SimpleIndexName::EnableShorten
 
   def change
