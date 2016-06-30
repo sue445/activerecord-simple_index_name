@@ -1,7 +1,20 @@
 # Change Log
 
 ## Unreleased
-[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v0.3.0.beta1...master)
+[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v0.3.0...master)
+
+## v0.3.0
+[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v0.3.0.beta1...v0.3.0)
+
+### Enhancements
+* Support activerecord 5.0.0
+  * https://github.com/sue445/activerecord-simple_index_name/pull/30
+
+### Other
+* Tiny 
+  * https://github.com/sue445/activerecord-simple_index_name/pull/29
+  * https://github.com/sue445/activerecord-simple_index_name/pull/28
+  * https://github.com/sue445/activerecord-simple_index_name/pull/27
 
 ## v0.3.0.beta1
 [full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v0.2.0...v0.3.0.beta1)
