@@ -22,6 +22,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "activerecord"
   spec.add_dependency "activesupport"
 
+  spec.add_development_dependency "activerecord-compatible_legacy_migration"
   spec.add_development_dependency "bundler"
   spec.add_development_dependency "coveralls"
   spec.add_development_dependency "codeclimate-test-reporter"
