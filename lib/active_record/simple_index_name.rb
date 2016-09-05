@@ -21,6 +21,17 @@ module ActiveRecord
     ensure
       Thread.current[:simple_index_name_shorten_mode] = nil
     end
+
+    def self.current_shorten?
+      case Thread.current[:simple_index_name_shorten_mode]
+      when :enable
+        true
+      when :disable
+        false
+      else
+        config.auto_shorten
+      end
+    end
   end
 end
 
