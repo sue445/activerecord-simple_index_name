@@ -14,6 +14,10 @@ describe ActiveRecord::ConnectionAdapters::SchemaStatements do
       context "When specified index name" do
         it_is_asserted_by { index_name_of(:comments, :user_id) == "comment_index" }
       end
+
+      context "When index name of renamed table" do
+        it_is_asserted_by { index_name_of(:new_table, :anonymous_name) == "anonymous_name" }
+      end
     end
 
     context "When auto_shorten is disabled" do
@@ -29,6 +33,10 @@ describe ActiveRecord::ConnectionAdapters::SchemaStatements do
 
       context "When specified index name" do
         it_is_asserted_by { index_name_of(:comments, :user_id) == "comment_index" }
+      end
+
+      context "When index name of renamed table" do
+        it_is_asserted_by { index_name_of(:new_table, :anonymous_name) == "index_new_table_on_anonymous_name" }
       end
     end
 
