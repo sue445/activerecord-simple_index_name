@@ -1,7 +1,14 @@
 # Change Log
 
 ## Unreleased
-[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v0.3.0...master)
+[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v0.4.0...master)
+
+## v0.4.0
+[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v0.3.0...v0.4.0)
+
+* Support `rename_table`
+  * https://github.com/sue445/activerecord-simple_index_name/issues/32
+  * https://github.com/sue445/activerecord-simple_index_name/pull/33
 
 ## v0.3.0
 [full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v0.3.0.beta1...v0.3.0)
