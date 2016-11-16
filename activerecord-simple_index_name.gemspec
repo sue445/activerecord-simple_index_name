@@ -25,11 +25,12 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "activerecord-compatible_legacy_migration"
   spec.add_development_dependency "bundler"
   spec.add_development_dependency "coveralls"
-  spec.add_development_dependency "codeclimate-test-reporter"
+  spec.add_development_dependency "codeclimate-test-reporter", "~> 1.0.0"
   spec.add_development_dependency "pry-byebug"
   spec.add_development_dependency "rails"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "rspec-power_assert"
+  spec.add_development_dependency "simplecov"
   spec.add_development_dependency "sqlite3"
 end

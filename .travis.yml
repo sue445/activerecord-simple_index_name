@@ -17,6 +17,7 @@ before_script:
 - export CI=true
 script:
 - bundle exec rspec
+- bundle exec codeclimate-test-reporter
 branches:
   only:
   - master
