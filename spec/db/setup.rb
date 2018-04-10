@@ -20,10 +20,18 @@ def up_migrate
   ActiveRecord::Tasks::DatabaseTasks.create(configuration)
 
   # db:migrate
-  ActiveRecord::Migrator.up(migrate_dir)
+  if ActiveRecord.version >= Gem::Version.create("5.2.0")
+    ActiveRecord::MigrationContext.new(migrate_dir).up
+  else
+    ActiveRecord::Migrator.up(migrate_dir)
+  end
 end
 
 def down_migrate
   # db:drop
-  ActiveRecord::Migrator.down(migrate_dir)
+  if ActiveRecord.version >= Gem::Version.create("5.2.0")
+    ActiveRecord::MigrationContext.new(migrate_dir).down
+  else
+    ActiveRecord::Migrator.down(migrate_dir)
+  end
 end
