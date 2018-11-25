@@ -1,45 +1,45 @@
 language: ruby
 rvm:
-- 2.1
-- 2.2.4
-- 2.3.1
-- 2.4.1
-- 2.5.0
-- ruby-head
+  - 2.1
+  - 2.2.4
+  - 2.3.1
+  - 2.4.1
+  - 2.5.0
+  - ruby-head
 gemfile:
-- gemfiles/rails_4_0.gemfile
-- gemfiles/rails_4_1.gemfile
-- gemfiles/rails_4_2.gemfile
-- gemfiles/rails_5_0.gemfile
-- gemfiles/rails_5_1.gemfile
-- gemfiles/rails_5_2.gemfile
+  - gemfiles/rails_4_0.gemfile
+  - gemfiles/rails_4_1.gemfile
+  - gemfiles/rails_4_2.gemfile
+  - gemfiles/rails_5_0.gemfile
+  - gemfiles/rails_5_1.gemfile
+  - gemfiles/rails_5_2.gemfile
 cache: bundler
 sudo: false
 before_install:
-- gem update --system --no-document
-- gem install bundler -v 1.16.1 --no-document
+  - gem update --system --no-document
+  - gem install bundler -v 1.16.1 --no-document
 before_script:
-- export CODECLIMATE_REPO_TOKEN=900e51ca1a374ee25f9166b5eb3f2a1d86fa33ca47d4dee6e9746f4120fc7fef
-- export CI=true
+  - export CODECLIMATE_REPO_TOKEN=900e51ca1a374ee25f9166b5eb3f2a1d86fa33ca47d4dee6e9746f4120fc7fef
+  - export CI=true
 script:
-- bundle exec rspec
-- bundle exec codeclimate-test-reporter
+  - bundle exec rspec
+  - bundle exec codeclimate-test-reporter
 branches:
   only:
-  - master
+    - master
 notifications:
   email: false
   slack:
     secure: iJVdq7jPe/vHRBDRZhGOBrvUNqXAVWtfP6yBoZ58RaMcboelaNxZm15o4+EhTCwNb3Sz3wM3MXQo9oQngB31UNpleavg0xK315oFBsQQ24M6oMWdCR6PndWH3sJtf5CZvXUZ0hEZDPG2dkDGTfXF2HyhyotHI3FzrvXAjI8R8sJKxGRVAga0uDAfUntsS19SS8Ftwt6ob3VNKl5GKYElZ4U/gZ3n2e+I8dxiTy9YNBaydNLf33lZe3iZHTQbcRDxH5HbLof0FItGPEvoPJSxnqa6OyfbsTajhRUUOU2m2RInJjSHCliHV1F8nzPjotCl6N7OegO2HJ93FepsZ2dOul/Hbxkb0BuxFxYFgGfS0bHDb66V6JiqmLpwBi/QibP1kVEiP4vizLdX5b32fi/p1L7FRDX00qsYsjEdDyBH5WrWF4yTKTpNotwHmb/E4nFfbtme3jawvSJq5Kg1FL07H3pTP6nUgEKKyYq1FQhxHEGgKHMZYmUG+B7kILgQj3ZM0w7M09Hb2NMDuv7PEr7CbOw6x7ulVUu8ZfgpU7+jKUlnSS8xPN7/kso3hnSWA4PRlNt0Ef9ingUstNpb4wJYDiAmYD7NfFLf4K6CikkcgGXJbV/XYwszb8DKV39vIYDgW0VzREerixo4+SQE0v7FFF1ZQQbQ3yZaQ26UnlYm/Ag=
 matrix:
   allow_failures:
-  - rvm: ruby-head
+    - rvm: ruby-head
 
   exclude:
-  # NOTE: activesupport 5.x requires Ruby version >= 2.2.2
-  - rvm: 2.1
-    gemfile: gemfiles/rails_5_0.gemfile
-  - rvm: 2.1
-    gemfile: gemfiles/rails_5_1.gemfile
-  - rvm: 2.1
-    gemfile: gemfiles/rails_5_2.gemfile
+    # NOTE: activesupport 5.x requires Ruby version >= 2.2.2
+    - rvm: 2.1
+      gemfile: gemfiles/rails_5_0.gemfile
+    - rvm: 2.1
+      gemfile: gemfiles/rails_5_1.gemfile
+    - rvm: 2.1
+      gemfile: gemfiles/rails_5_2.gemfile
