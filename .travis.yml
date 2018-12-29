@@ -5,7 +5,7 @@ rvm:
   - 2.3
   - 2.4
   - 2.5
-  - 2.6.0
+  - 2.6
   - ruby-head
 gemfile:
   - gemfiles/rails_4_0.gemfile
@@ -36,6 +36,11 @@ notifications:
 matrix:
   allow_failures:
     - rvm: ruby-head
+  include:
+    - rvm: 2.6
+      env: RUBYOPT="--jit"
+    - rvm: ruby-head
+      env: RUBYOPT="--jit"
 
   exclude:
     # NOTE: activesupport 5.x requires Ruby version >= 2.2.2
