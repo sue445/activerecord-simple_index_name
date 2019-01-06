@@ -3,6 +3,7 @@
 ## Unreleased
 [full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v1.0.0...master)
 
+## v1.0.0
 ### Breaking changes :bomb:
 [full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v0.4.0...v1.0.0)
 
