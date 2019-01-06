@@ -8,8 +8,8 @@ Shorten index name
 [![Code Climate](https://codeclimate.com/github/sue445/activerecord-simple_index_name/badges/gpa.svg)](https://codeclimate.com/github/sue445/activerecord-simple_index_name)
 
 ## Requirements
-* Ruby 2.1+
-* activerecord 4.0+
+* Ruby 2.3+
+* activerecord 5.0+
 
 ## Supported frameworks
 * [Ruby on Rails](https://github.com/rails/rails)
