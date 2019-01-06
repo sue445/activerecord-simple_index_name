@@ -1,7 +1,13 @@
 # Change Log
 
 ## Unreleased
-[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v0.4.0...master)
+[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v1.0.0...master)
+
+### Breaking changes :bomb:
+[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v0.4.0...v1.0.0)
+
+* Drop support for Ruby 2.2 and Rails 4.2
+  * https://github.com/sue445/activerecord-simple_index_name/pull/50
 
 ## v0.4.0
 [full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v0.3.0...v0.4.0)
