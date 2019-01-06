@@ -62,7 +62,7 @@ describe ActiveRecord::ConnectionAdapters::SchemaStatements do
 
     def index_name_of(table, columns)
       columns = Array.wrap(columns).map(&:to_s)
-      table_indexes(table.to_s).find { |index| index.columns == columns }.try(:name)
+      table_indexes(table.to_s).find { |index| index.columns == columns }&.name
     end
   end
 end
