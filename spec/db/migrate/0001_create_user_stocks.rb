@@ -1,4 +1,4 @@
-class CreateUserStocks < ActiveRecord::CompatibleLegacyMigration.migration_class
+class CreateUserStocks < ActiveRecord::Migration[4.2]
   def change
     create_table :user_stocks do |t|
       t.integer :user_id,    null: false

@@ -1,4 +1,4 @@
-class CreateOldTable < ActiveRecord::CompatibleLegacyMigration.migration_class
+class CreateOldTable < ActiveRecord::Migration[4.2]
   def change
     create_table :old_table do |t|
       t.string :anonymous_name, null: false
