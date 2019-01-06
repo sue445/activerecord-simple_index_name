@@ -25,7 +25,7 @@
   * https://github.com/sue445/activerecord-simple_index_name/pull/30
 
 ### Other
-* Tiny 
+* Tiny
   * https://github.com/sue445/activerecord-simple_index_name/pull/29
   * https://github.com/sue445/activerecord-simple_index_name/pull/28
   * https://github.com/sue445/activerecord-simple_index_name/pull/27
@@ -36,7 +36,7 @@
 ### Enhancements
 * Support activerecord 5.0.0.beta2
   * https://github.com/sue445/activerecord-simple_index_name/pull/22
-  
+
 ### Other
 * Keep ruby 2.3.x build on Travis CI
   * https://github.com/sue445/activerecord-simple_index_name/pull/25
@@ -62,13 +62,13 @@
 ### Other
 * Test with Rails 4.0.x
   * https://github.com/sue445/activerecord-simple_index_name/pull/19
-* Other tiny refactorings 
+* Other tiny refactorings
   * https://github.com/sue445/activerecord-simple_index_name/pull/14
   * https://github.com/sue445/activerecord-simple_index_name/pull/15
   * https://github.com/sue445/activerecord-simple_index_name/pull/16
   * https://github.com/sue445/activerecord-simple_index_name/pull/21
   * https://github.com/sue445/activerecord-simple_index_name/pull/23
   * https://github.com/sue445/activerecord-simple_index_name/pull/24
-  
+
 ## v0.1.0
 * First release
