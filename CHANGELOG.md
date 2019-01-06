@@ -44,7 +44,7 @@
   * https://github.com/sue445/activerecord-simple_index_name/pull/17
   * Move: `lib/activerecord/simple_index_name` -> `lib/active_record/simple_index_name`
   * Rename: `Activerecord::SimpleIndexName` -> `ActiveRecord::SimpleIndexName`
-  * If use `require "activerecord/simple_index_name"`, change to `require "activer_ecord/simple_index_name"`
+  * If use `require "activerecord/simple_index_name"`, change to `require "active_record/simple_index_name"`
 
 ### Enhancements
 * Add `ActiveRecord::SimpleIndexName.config.auto_shorten` configuration
