@@ -30,7 +30,7 @@ def up_migrate
 end
 
 def down_migrate
-  # db:drop
+  # db:down
   if ActiveRecord.version >= Gem::Version.create("5.2.0")
     ActiveRecord::MigrationContext.new(migrate_dir).down
   else
