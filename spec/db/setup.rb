@@ -22,7 +22,9 @@ def up_migrate
   ActiveRecord::Tasks::DatabaseTasks.create(configuration)
 
   # db:migrate
-  if ActiveRecord.version >= Gem::Version.create("5.2.0")
+  if ActiveRecord.version >= Gem::Version.create("6.0.0.rc2")
+    ActiveRecord::MigrationContext.new(migrate_dir, ActiveRecord::SchemaMigration).up
+  elsif ActiveRecord.version >= Gem::Version.create("5.2.0")
     ActiveRecord::MigrationContext.new(migrate_dir).up
   else
     ActiveRecord::Migrator.up(migrate_dir)
@@ -31,7 +33,9 @@ end
 
 def down_migrate
   # db:down
-  if ActiveRecord.version >= Gem::Version.create("5.2.0")
+  if ActiveRecord.version >= Gem::Version.create("6.0.0.rc2")
+    ActiveRecord::MigrationContext.new(migrate_dir, ActiveRecord::SchemaMigration).down
+  elsif ActiveRecord.version >= Gem::Version.create("5.2.0")
     ActiveRecord::MigrationContext.new(migrate_dir).down
   else
     ActiveRecord::Migrator.down(migrate_dir)
