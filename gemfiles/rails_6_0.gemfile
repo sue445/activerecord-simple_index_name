@@ -1,8 +1,8 @@
 source "https://rubygems.org"
 
-gem "rails", "~> 6.0.0.rc2"
+gem "rails", "~> 6.0.0"
 
-# c.f. https://github.com/rails/rails/blob/v6.0.0.rc1/activerecord/lib/active_record/connection_adapters/sqlite3_adapter.rb#L13
+# c.f. https://github.com/rails/rails/blob/v6.0.0/activerecord/lib/active_record/connection_adapters/sqlite3_adapter.rb#L13
 gem "sqlite3", "~> 1.4"
 
 gemspec path: '../'
