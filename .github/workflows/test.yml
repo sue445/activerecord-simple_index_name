@@ -63,9 +63,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-
       - run: apt-get update && apt-get install -y libsqlite3-dev
-
 
       - name: Cache vendor/bundle
         uses: actions/cache@v1
