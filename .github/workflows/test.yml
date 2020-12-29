@@ -31,6 +31,7 @@ jobs:
           - ruby:2.5
           - ruby:2.6
           - ruby:2.7
+          - ruby:3.0
           - rubylang/ruby:master-nightly-bionic
         gemfile:
           - rails_5_0.gemfile
