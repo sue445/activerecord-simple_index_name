@@ -12,9 +12,6 @@ on:
   schedule:
     - cron: "0 10 * * 5" # JST 19:00 (Fri)
 
-env:
-  CI: "true"
-
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -31,12 +28,13 @@ jobs:
           - ruby:2.5
           - ruby:2.6
           - ruby:2.7
+          - ruby:3.0
           - rubylang/ruby:master-nightly-bionic
         gemfile:
-          - rails_5_0.gemfile
-          - rails_5_1.gemfile
-          - rails_5_2.gemfile
-          - rails_6_0.gemfile
+          - rails_5_0
+          - rails_5_1
+          - rails_5_2
+          - rails_6_0
         include:
           - ruby: rubylang/ruby:master-nightly-bionic
             allow_failures: "true"
@@ -44,16 +42,25 @@ jobs:
         exclude:
           # Rails 6.0 requires Ruby 2.5+
           - ruby:    ruby:2.3
-            gemfile: rails_6_0.gemfile
+            gemfile: rails_6_0
           - ruby:    ruby:2.4
-            gemfile: rails_6_0.gemfile
+            gemfile: rails_6_0
+
+          # Rails 5.x doesn't work on Ruby 3.0+
+          - ruby:    ruby:3.0
+            gemfile: rails_5_0
+          - ruby:    ruby:3.0
+            gemfile: rails_5_1
+          - ruby:    ruby:3.0
+            gemfile: rails_5_2
+
+    env:
+      BUNDLE_GEMFILE: gemfiles/${{ matrix.gemfile }}.gemfile
 
     steps:
       - uses: actions/checkout@v2
 
-
       - run: apt-get update && apt-get install -y libsqlite3-dev
-
 
       - name: Cache vendor/bundle
         uses: actions/cache@v1
