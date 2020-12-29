@@ -49,6 +49,14 @@ jobs:
           - ruby:    ruby:2.4
             gemfile: rails_6_0.gemfile
 
+          # Rails 5.x doesn't work on Ruby 3.0+
+          - ruby:    ruby:3.0
+            gemfile: rails_5_0
+          - ruby:    ruby:3.0
+            gemfile: rails_5_1
+          - ruby:    ruby:3.0
+            gemfile: rails_5_2
+
     steps:
       - uses: actions/checkout@v2
 
