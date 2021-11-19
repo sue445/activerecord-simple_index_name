@@ -1,7 +1,13 @@
 # Change Log
 
 ## Unreleased
-[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v1.0.0...master)
+[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v1.0.1...master)
+
+## v1.0.1
+[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v1.0.0...v1.0.1)
+
+* Enable MFA requirement for gem releasing
+  * https://github.com/sue445/activerecord-simple_index_name/pull/73
 
 ## v1.0.0
 ### Breaking changes :bomb:
