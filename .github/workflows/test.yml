@@ -37,6 +37,7 @@ jobs:
           - rails_5_2
           - rails_6_0
           - rails_6_1
+          - rails_7_0
         include:
           - ruby: rubylang/ruby:master-nightly-bionic
             allow_failures: "true"
@@ -51,6 +52,16 @@ jobs:
             gemfile: rails_6_1
           - ruby:    ruby:2.4
             gemfile: rails_6_1
+
+          # Rails 7.0+ requires Ruby 2.7+
+          - ruby:    ruby:2.3
+            gemfile: rails_7_0
+          - ruby:    ruby:2.4
+            gemfile: rails_7_0
+          - ruby:    ruby:2.5
+            gemfile: rails_7_0
+          - ruby:    ruby:2.6
+            gemfile: rails_7_0
 
           # Rails 5.x doesn't work on Ruby 3.0+
           - ruby:    ruby:3.0
