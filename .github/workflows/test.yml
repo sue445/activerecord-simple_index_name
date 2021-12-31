@@ -29,6 +29,7 @@ jobs:
           - ruby:2.6
           - ruby:2.7
           - ruby:3.0
+          - ruby:3.1
           - rubylang/ruby:master-nightly-bionic
         gemfile:
           - rails_5_0
@@ -57,6 +58,12 @@ jobs:
           - ruby:    ruby:3.0
             gemfile: rails_5_1
           - ruby:    ruby:3.0
+            gemfile: rails_5_2
+          - ruby:    ruby:3.1
+            gemfile: rails_5_0
+          - ruby:    ruby:3.1
+            gemfile: rails_5_1
+          - ruby:    ruby:3.1
             gemfile: rails_5_2
 
     env:
