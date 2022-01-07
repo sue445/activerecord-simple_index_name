@@ -6,7 +6,15 @@ ActiveRecord::Base.configurations = {
   }
 }.with_indifferent_access
 
-ActiveRecord::Base.establish_connection(:test)
+def test_configuration
+  if ActiveRecord.gem_version >= Gem::Version.new("6.1.0")
+    return ActiveRecord::Base.configurations.configs_for(env_name: "test")[0]
+  end
+
+  ActiveRecord::Base.configurations["test"]
+end
+
+ActiveRecord::Base.establish_connection(test_configuration)
 ActiveRecord::Schema.verbose = false
 
 def migrate_dir
@@ -16,10 +24,8 @@ end
 require "active_record/railtie"
 
 def up_migrate
-  configuration = ActiveRecord::Base.configurations["test"]
-
   # db:create
-  ActiveRecord::Tasks::DatabaseTasks.create(configuration)
+  ActiveRecord::Tasks::DatabaseTasks.create(test_configuration)
 
   # db:migrate
   if ActiveRecord.version >= Gem::Version.create("6.0.0.rc2")
