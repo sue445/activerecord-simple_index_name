@@ -8,3 +8,5 @@ gem "rails", "~> 7.0.1"
 gem "sqlite3", "~> 1.4"
 
 gemspec path: '../'
+
+eval_gemfile "./common.gemfile"
