@@ -4,19 +4,19 @@ describe ActiveRecord::ConnectionAdapters::SchemaStatements do
       include_context :setup_database, auto_shorten: true
 
       context "When single column index" do
-        it_is_asserted_by { index_name_of(:articles, [:user_id]) == "user_id" }
+        it { expect(index_name_of(:articles, [:user_id])).to eq "user_id" }
       end
 
       context "When multiple columns index" do
-        it_is_asserted_by { index_name_of(:user_stocks, [:user_id, :article_id]) == "user_id_and_article_id" }
+        it { expect(index_name_of(:user_stocks, [:user_id, :article_id])).to eq "user_id_and_article_id" }
       end
 
       context "When specified index name" do
-        it_is_asserted_by { index_name_of(:comments, :user_id) == "comment_index" }
+        it { expect(index_name_of(:comments, :user_id)).to eq "comment_index" }
       end
 
       context "When index name of renamed table" do
-        it_is_asserted_by { index_name_of(:new_table, :anonymous_name) == "anonymous_name" }
+        it { expect(index_name_of(:new_table, :anonymous_name)).to eq "anonymous_name" }
       end
     end
 
@@ -24,19 +24,19 @@ describe ActiveRecord::ConnectionAdapters::SchemaStatements do
       include_context :setup_database, auto_shorten: false
 
       context "When single column index" do
-        it_is_asserted_by { index_name_of(:articles, [:user_id]) == "index_articles_on_user_id" }
+        it { expect(index_name_of(:articles, [:user_id])).to eq "index_articles_on_user_id" }
       end
 
       context "When multiple columns index" do
-        it_is_asserted_by { index_name_of(:user_stocks, [:user_id, :article_id]) == "index_user_stocks_on_user_id_and_article_id" }
+        it { expect(index_name_of(:user_stocks, [:user_id, :article_id])).to eq "index_user_stocks_on_user_id_and_article_id" }
       end
 
       context "When specified index name" do
-        it_is_asserted_by { index_name_of(:comments, :user_id) == "comment_index" }
+        it { expect(index_name_of(:comments, :user_id)).to eq "comment_index" }
       end
 
       context "When index name of renamed table" do
-        it_is_asserted_by { index_name_of(:new_table, :anonymous_name) == "index_new_table_on_anonymous_name" }
+        it { expect(index_name_of(:new_table, :anonymous_name)).to eq "index_new_table_on_anonymous_name" }
       end
     end
 
@@ -46,11 +46,11 @@ describe ActiveRecord::ConnectionAdapters::SchemaStatements do
           include_context :setup_database, auto_shorten: auto_shorten
 
           context "When has DisableShorten in migration" do
-            it_is_asserted_by { index_name_of(:user_stocks, :article_id) == "index_user_stocks_on_article_id" }
+            it { expect(index_name_of(:user_stocks, :article_id)).to eq "index_user_stocks_on_article_id" }
           end
 
           context "When has EnableShorten in migration" do
-            it_is_asserted_by { index_name_of(:articles, :category_id) == "category_id" }
+            it { expect(index_name_of(:articles, :category_id)).to eq "category_id" }
           end
         end
       end
