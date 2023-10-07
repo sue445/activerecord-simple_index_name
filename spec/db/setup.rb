@@ -28,7 +28,10 @@ def up_migrate
   ActiveRecord::Tasks::DatabaseTasks.create(test_configuration)
 
   # db:migrate
-  if ActiveRecord.version >= Gem::Version.create("6.0.0.rc2")
+  if ActiveRecord.version >= Gem::Version.create("7.1.0")
+    # c.f. https://github.com/rails/rails/blob/v7.1.0/activerecord/test/cases/migrator_test.rb#L92-L94
+    ActiveRecord::MigrationContext.new(migrate_dir, ActiveRecord::Base.connection.schema_migration, ActiveRecord::Base.connection.internal_metadata).up
+  elsif ActiveRecord.version >= Gem::Version.create("6.0.0.rc2")
     ActiveRecord::MigrationContext.new(migrate_dir, ActiveRecord::SchemaMigration).up
   elsif ActiveRecord.version >= Gem::Version.create("5.2.0")
     ActiveRecord::MigrationContext.new(migrate_dir).up
@@ -39,7 +42,10 @@ end
 
 def down_migrate
   # db:down
-  if ActiveRecord.version >= Gem::Version.create("6.0.0.rc2")
+  if ActiveRecord.version >= Gem::Version.create("7.1.0")
+    # c.f. https://github.com/rails/rails/blob/v7.1.0/activerecord/test/cases/migrator_test.rb#L92-L94
+    ActiveRecord::MigrationContext.new(migrate_dir, ActiveRecord::Base.connection.schema_migration, ActiveRecord::Base.connection.internal_metadata).down
+  elsif ActiveRecord.version >= Gem::Version.create("6.0.0.rc2")
     ActiveRecord::MigrationContext.new(migrate_dir, ActiveRecord::SchemaMigration).down
   elsif ActiveRecord.version >= Gem::Version.create("5.2.0")
     ActiveRecord::MigrationContext.new(migrate_dir).down
