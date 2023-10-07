@@ -1,7 +1,13 @@
 # Change Log
 
 ## Unreleased
-[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v1.0.1...master)
+[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v1.1.0...master)
+
+## v1.1.0
+[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v1.0.1...v1.1.0)
+
+* Support activerecord 7.1
+  * https://github.com/sue445/activerecord-simple_index_name/pull/88
 
 ## v1.0.1
 [full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v1.0.0...v1.0.1)
