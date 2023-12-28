@@ -2,8 +2,16 @@ source "https://rubygems.org"
 
 gem "rails", "~> 7.1.1"
 
-# c.f. https://github.com/rails/rails/blob/v7.1.0/activerecord/lib/active_record/connection_adapters/sqlite3_adapter.rb#L14
-gem "sqlite3", "~> 1.4"
+if Gem::Version.create(RUBY_VERSION) < Gem::Version.create("3.0.0")
+  # FIXME: sqlite3 1.7.0 cannot be installed with ruby 2.7
+  # ref.
+  # * https://github.com/sue445/activerecord-simple_index_name/actions/runs/7345118908/job/19997837875?pr=94
+  # * https://github.com/sparklemotion/sqlite3-ruby/releases/tag/v1.7.0
+  gem "sqlite3", "~> 1.4", "< 1.7.0"
+else
+  # c.f. https://github.com/rails/rails/blob/v7.1.0/activerecord/lib/active_record/connection_adapters/sqlite3_adapter.rb#L14
+  gem "sqlite3", "~> 1.4"
+end
 
 gemspec path: '../'
 
