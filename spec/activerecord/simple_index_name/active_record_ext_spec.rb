@@ -18,6 +18,10 @@ describe ActiveRecord::ConnectionAdapters::SchemaStatements do
       context "When index name of renamed table" do
         it { expect(index_name_of(:new_table, :anonymous_name)).to eq "anonymous_name" }
       end
+
+      context "When add index in create_table" do
+        it { expect(index_name_of(:user_stocks, :foo_id)).to eq "foo_id" }
+      end
     end
 
     context "When auto_shorten is disabled" do
@@ -37,6 +41,10 @@ describe ActiveRecord::ConnectionAdapters::SchemaStatements do
 
       context "When index name of renamed table" do
         it { expect(index_name_of(:new_table, :anonymous_name)).to eq "index_new_table_on_anonymous_name" }
+      end
+
+      context "When add index in create_table" do
+        it { expect(index_name_of(:user_stocks, :foo_id)).to eq "index_user_stocks_on_foo_id" }
       end
     end
 
