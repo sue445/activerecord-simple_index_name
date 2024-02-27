@@ -36,6 +36,9 @@ ActiveRecord::ConnectionAdapters::SchemaStatements.class_eval do
   prepend ActiveRecord::SimpleIndexName::ActiveRecordExt_7_1::SchemaStatements
 end
 
-ActiveRecord::Migration::Compatibility::V7_0::LegacyIndexName.module_eval do
+ActiveRecord::Migration::Compatibility::V7_0.class_eval do
+  prepend ActiveRecord::SimpleIndexName::ActiveRecordExt_7_1::V7_0
+end
+ActiveRecord::Migration::Compatibility::V7_0::TableDefinition.module_eval do
   prepend ActiveRecord::SimpleIndexName::ActiveRecordExt_7_1::V7_0
 end
