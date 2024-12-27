@@ -13,6 +13,12 @@ else
   gem "sqlite3", "~> 1.4"
 end
 
+# for Ruby 3.4+
+gem "base64"
+gem "bigdecimal"
+gem "drb"
+gem "mutex_m"
+
 gemspec path: '../'
 
 eval_gemfile "./common.gemfile"
