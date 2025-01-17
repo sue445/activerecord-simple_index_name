@@ -10,6 +10,9 @@ if ENV["CI"]
   end
 end
 
+# FIXME: NameError: uninitialized constant ActiveSupport::LoggerThreadSafeLevel::Logger when activesupport < 7.1
+require "logger"
+
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require "active_record/simple_index_name"
 
