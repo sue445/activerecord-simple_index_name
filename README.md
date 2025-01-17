@@ -3,7 +3,7 @@
 Shorten index name
 
 [![Gem Version](https://badge.fury.io/rb/activerecord-simple_index_name.svg)](https://badge.fury.io/rb/activerecord-simple_index_name)
-[![Build Status](https://github.com/sue445/activerecord-simple_index_name/workflows/test/badge.svg?branch=master)](https://github.com/sue445/activerecord-simple_index_name/actions?query=workflow%3Atest)
+[![test](https://github.com/sue445/activerecord-simple_index_name/actions/workflows/test.yml/badge.svg)](https://github.com/sue445/activerecord-simple_index_name/actions/workflows/test.yml)
 [![Coverage Status](https://coveralls.io/repos/sue445/activerecord-simple_index_name/badge.svg?branch=master&service=github)](https://coveralls.io/github/sue445/activerecord-simple_index_name?branch=master)
 [![Code Climate](https://codeclimate.com/github/sue445/activerecord-simple_index_name/badges/gpa.svg)](https://codeclimate.com/github/sue445/activerecord-simple_index_name)
 
