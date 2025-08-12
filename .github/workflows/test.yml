@@ -137,7 +137,7 @@ jobs:
       BUNDLE_GEMFILE: gemfiles/${{ matrix.gemfile }}.gemfile
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - run: sudo apt-get update
       - run: sudo apt-get install -y libsqlite3-dev
