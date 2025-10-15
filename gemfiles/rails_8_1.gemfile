@@ -1,0 +1,10 @@
+source "https://rubygems.org"
+
+gem "rails", "~> 8.1.0.rc1"
+
+# c.f. https://github.com/rails/rails/blob/v8.1.0.beta1/activerecord/lib/active_record/connection_adapters/sqlite3_adapter.rb#L14
+gem "sqlite3", ">= 2.1"
+
+gemspec path: '../'
+
+eval_gemfile "./common.gemfile"
