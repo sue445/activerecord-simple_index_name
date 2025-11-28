@@ -1,7 +1,10 @@
 # Change Log
 
 ## Unreleased
-[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v1.1.1...master)
+[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v1.1.2...master)
+
+## [v1.1.2](https://github.com/sue445/activerecord-simple_index_name/releases/tag/v1.1.2)
+[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v1.1.1...v1.1.2)
 
 ## v1.1.1
 [full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v1.1.0...v1.1.1)
