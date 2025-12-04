@@ -2,13 +2,18 @@
 version: 2
 
 updates:
+  ###########################################################
+  # NOTE: following sections are auto generated. DO NOT EDIT!
+  ###########################################################
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: monthly
-      timezone: Asia/Tokyo
       time: "05:00"
-    cooldown:
-      default-days: 7
+      timezone: Asia/Tokyo
     assignees:
       - sue445
+    cooldown:
+      default-days: 7
+  ###########################################################
+
