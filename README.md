@@ -5,7 +5,7 @@ Shorten index name
 [![Gem Version](https://badge.fury.io/rb/activerecord-simple_index_name.svg)](https://badge.fury.io/rb/activerecord-simple_index_name)
 [![test](https://github.com/sue445/activerecord-simple_index_name/actions/workflows/test.yml/badge.svg)](https://github.com/sue445/activerecord-simple_index_name/actions/workflows/test.yml)
 [![Coverage Status](https://coveralls.io/repos/sue445/activerecord-simple_index_name/badge.svg?branch=master&service=github)](https://coveralls.io/github/sue445/activerecord-simple_index_name?branch=master)
-[![Code Climate](https://codeclimate.com/github/sue445/activerecord-simple_index_name/badges/gpa.svg)](https://codeclimate.com/github/sue445/activerecord-simple_index_name)
+[![Maintainability](https://qlty.sh/gh/sue445/projects/activerecord-simple_index_name/maintainability.svg)](https://qlty.sh/gh/sue445/projects/activerecord-simple_index_name)
 
 ## Requirements
 * Ruby 2.3+
