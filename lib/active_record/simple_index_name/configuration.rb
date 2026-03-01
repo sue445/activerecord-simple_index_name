@@ -1,14 +1,20 @@
 module ActiveRecord
   module SimpleIndexName
-    require "active_support/configurable"
-
     class Configuration
-      include ActiveSupport::Configurable
+      if ActiveSupport.gem_version < Gem::Version.create("8.1.0")
+        require "active_support/configurable"
 
-      config_accessor :auto_shorten
+        include ActiveSupport::Configurable
 
-      configure do |config|
-        config.auto_shorten = true
+        config_accessor :auto_shorten
+
+        configure do |config|
+          config.auto_shorten = true
+        end
+      else
+        require "active_support/core_ext/class/attribute"
+
+        class_attribute :auto_shorten, default: true
       end
     end
   end
