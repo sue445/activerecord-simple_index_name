@@ -1,10 +1,19 @@
 # Change Log
 
 ## Unreleased
-[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v1.1.2...master)
+[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v1.1.3...master)
+
+## [v1.1.3](https://github.com/sue445/activerecord-simple_index_name/releases/tag/v1.1.3)
+[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v1.1.2...v1.1.3)
+
+* Fix deprecation warning since activerecord 8.1
+  * https://github.com/sue445/activerecord-simple_index_name/pull/137
 
 ## [v1.1.2](https://github.com/sue445/activerecord-simple_index_name/releases/tag/v1.1.2)
 [full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v1.1.1...v1.1.2)
+
+* Release gem from GitHub Actions
+  * https://github.com/sue445/activerecord-simple_index_name/pull/114
 
 ## v1.1.1
 [full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v1.1.0...v1.1.1)
