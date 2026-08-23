@@ -1,7 +1,13 @@
 # Change Log
 
 ## Unreleased
-[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v1.1.3...master)
+[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v1.1.4...master)
+
+## [v1.1.4](https://github.com/sue445/activerecord-simple_index_name/releases/tag/v1.1.4)
+[full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v1.1.3...v1.1.4)
+
+* Migrate release_gem workflow to sue445/workflows (Also testing the gem release)
+  * https://github.com/sue445/activerecord-simple_index_name/pull/155
 
 ## [v1.1.3](https://github.com/sue445/activerecord-simple_index_name/releases/tag/v1.1.3)
 [full changelog](http://github.com/sue445/activerecord-simple_index_name/compare/v1.1.2...v1.1.3)
